@@ -1,0 +1,12 @@
+{{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %} Востребованность {% endblock %}
+{% block content %}
+    <div style="text-align: center">
+             {{ infopage.text|safe }}
+            <div style="padding: 30px 10% 0 10%">
+                <img width="48%" src="{{ infopage.graph_left.url }}"/>
+                <img width="48%" src="{{ infopage.graph_right.url }}"/>
+            </div>
+    </div>
+{% endblock %}

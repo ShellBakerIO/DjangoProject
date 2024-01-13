@@ -1,0 +1,8 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<title>{% block title %} Навыки {% endblock %}</title>
+{% block content %}
+    <div>
+    {{ skillspage.text|safe }}
+    </div>
+{% endblock %}

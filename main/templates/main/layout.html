@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <aside>
+        <i class="fas fa-regular fa-laptop-code"></i>
+        <span class="logo">BackendNetwork</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</li></a>
+            <a href="{% url 'info' %}"><li><i class="fas fa-solid fa-fire"></i> Востребованность</li></a>
+            <a href="{% url 'geography' %}"><li><i class="fas fa-solid fa-plane"></i> География</li></a>
+            <a href="{% url 'skills' %}"><li><i class="fas fa-solid fa-list"></i> Навыки</li></a>
+            <a href="{% url 'vacancies' %}"><li><i class="fas fa-solid fa-newspaper"></i> Последние вакансии</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+<footer>
+    <div class="footer">
+        <div class="container">
+            <p class="name"><i class="fas fa-regular fa-user"></i>  Насибов Фариз РИ-220942</p>
+        </div>
+    </div>
+</footer>
+</html>
