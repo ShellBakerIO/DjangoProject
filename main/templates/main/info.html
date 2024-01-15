@@ -1,12 +1,15 @@
-{{% extends 'main/layout.html' %}
+{% extends 'main/layout.html' %}
 {% load static %}
 {% block title %} Востребованность {% endblock %}
 {% block content %}
-    <div style="text-align: center">
+    <h3 style="text-align: center">Данные о вакансиях</h3>
+    <div style="padding: 20px 10% 20px 10%">
+        <img style="padding: 0 0 0 20px;" width="500px" height="380px" src="{{ infopage.graph_left.url }}"/>
+    </div>
+    <div style="">
+        <img style="padding: 10px; position: relative; left: 530px; top: -410px;" width="500px" height="400px" src="{{ infopage.graph_right.url }}"/>
+    </div>
+    <div style="text-align: center; top: -50px;">
              {{ infopage.text|safe }}
-            <div style="padding: 30px 10% 0 10%">
-                <img width="48%" src="{{ infopage.graph_left.url }}"/>
-                <img width="48%" src="{{ infopage.graph_right.url }}"/>
-            </div>
     </div>
 {% endblock %}

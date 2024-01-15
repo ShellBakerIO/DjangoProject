@@ -2,7 +2,9 @@
 {% load static %}
 <title>{% block title %} Навыки {% endblock %}</title>
 {% block content %}
-    <div>
-    {{ skillspage.text|safe }}
+<h2  style="text-align: right; margin: 0 20% 0 20%">Список самых популярных скиллов по годам</h2>
+    <img style="margin: 40px" width="960px" height="500px" src="{{ skillspage.graph.url }}">
+    <div style="text-align: left; color: #fff; font-size: 15px; margin: 10px 10px 0 270px">
+        {{ skillspage.text|safe }}
     </div>
 {% endblock %}

@@ -2,9 +2,11 @@
 {% load static %}
 {% block title %} Последние вакансии {% endblock %}
 {% block content %}
+    <img width="1030px" height="620px" style="padding: 20px 20px;" src="https://media.proglib.io/wp-uploads/2018/06/backend-dev-2018.jpg"/>
+    <h2 style="text-align: center; padding: 40px 0;">Последние вакансии</h2>
     <div>
         {% for vacancy in vacancies %}
-            <div>
+            <div style="color: #fff; position: relative; left: 30px; font-size: 15px;">
                 <h2>{{ vacancy.name }}</h2>
                 <br>
                 <p><b>Зарплата:</b> {{ vacancy.salary }}</p>

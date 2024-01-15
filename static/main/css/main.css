@@ -35,14 +35,6 @@ aside ul li:hover, aside ul a:hover {
     text-decoration: none;
 }
 
-main .homi {
-    float: left;
-    color: #fff;
-    margin-top: 40px;
-    text-align: center;
-    width: 75%;
-}
-
 .home_img {
     float: right;
     padding: -20px 20px;
@@ -50,8 +42,9 @@ main .homi {
     height: 50%;
 }
 
-div .htext {
-    margin: 0 10px;
+.skills_img {
+    height: 300px;
+    width: 300px;
 }
 
 .footer {
@@ -67,81 +60,4 @@ div .htext {
 
 h2, h3 {
     color: #fff;
-}
-
-.main {
-    /*font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;*/
-    margin-left: 12%;
-    padding: 40px 70px 40px 100px;
-}
-
-
-.head_img {
-    color: #f64c72;
-    float: left;
-    width: 30px;
-    height: 20px;
-}
-
-
-.title h1 {
-    font-size: 40px;
-    margin-bottom: 50px;
-}
-
-
-header {
-    padding-bottom: 10px;
-    margin-bottom: auto;
-    background: #4056A1;
-}
-
-header h4 {
-    padding: 9px 3% 0 0;
-    text-align: right;
-}
-
-.head_img {
-    color: #f64c72;
-    float: left;
-    width: 30px;
-    height: auto;
-}
-
-.page {
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
-.skill_list p {
-    width: 100%;
-    color: #111111;
-    text-align: center;
-}
-
-.skill_list a {
-    color: #111111;
-    text-align: center;
-    text-decoration: none;
-}
-
-.skill_list {
-    position: page;
-    font-size: 25px;
-}
-
-.skill_list div {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    float: left;
-    width: 13%;
-    height: 200px;
-    margin: 100px;
-}
-
-.skills_img {
-    width: 100%;
 }
