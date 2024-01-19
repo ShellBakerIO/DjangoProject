@@ -1,22 +1,5 @@
 import datetime
-
 from django.db import models
-
-
-# Create your models here
-
-"""
-Тут лежат модели для админки после рефакторинга нужно прописать команды
-py manage.py makemigrations
-py manage.py migrate
-
-Если будут ошибки то нужно удалить все из папки migtations (кроме init)
-
-Если это гне помогло то удали db.sqlite3
-затем введи две верхние команды + py manage.py createsuperuser
-там имя пароль (ты не будешь его видеть когда вбиваешь) 
-"""
-
 
 
 class Home(models.Model):

@@ -3,15 +3,23 @@ import requests
 
 
 def clean_vacancy(vacancy):
-    if vacancy['salary']['from'] != None and vacancy['salary']['to'] != None and vacancy['salary']['from'] != vacancy['salary']['to']:
-        vacancy['salary'] = f"от {'{0:,}'.format(vacancy['salary']['from']).replace(',', ' ')} до {'{0:,}'.format(vacancy['salary']['to']).replace(',', ' ')} {vacancy['salary']['currency']}"
-    elif vacancy['salary']['from'] != None:
-        vacancy['salary'] = f"{'{0:,}'.format(vacancy['salary']['from']).replace(',', ' ')} {vacancy['salary']['currency']}"
-    elif vacancy['salary']['to'] != None:
-        vacancy['salary'] = f"{'{0:,}'.format(vacancy['salary']['to']).replace(',', ' ')} {vacancy['salary']['currency']}"
+    salary_from = vacancy['salary']['from']
+    salary_to = vacancy['salary']['to']
+    currency = vacancy['salary']['currency']
+    key_skills = ', '.join(x['name'] for x in vacancy['key_skills'])
+
+    if salary_from is not None and salary_to is not None and salary_from != salary_to:
+        salary_text = f"от {'{0:,}'.format(salary_from).replace(',', ' ')} до {'{0:,}'.format(salary_to).replace(',', ' ')} {currency}"
+    elif salary_from is not None:
+        salary_text = f"{'{0:,}'.format(salary_from).replace(',', ' ')} {currency}"
+    elif salary_to is not None:
+        salary_text = f"{'{0:,}'.format(salary_to).replace(',', ' ')} {currency}"
     else:
-        vacancy['salary'] = 'Нет данных'
-    vacancy['key_skills'] = ', '.join(map(lambda x: x['name'], vacancy['key_skills']))
+        salary_text = 'Нет данных'
+
+    vacancy['salary'] = salary_text
+    vacancy['key_skills'] = key_skills
+
     return vacancy
 
 def get_vacancies():
